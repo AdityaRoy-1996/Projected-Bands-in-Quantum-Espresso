@@ -18,7 +18,7 @@ Projected Electronic Bands in Quantum Espresso
   
 ## Procedure :
 Currently, three types of situations are supported :\
-       Spin Unpolarized\
+- [x] Spin Unpolarized\
   \t Spin Polarized\
   \t Non-Collinear Spin-Orbit\
 \
