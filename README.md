@@ -1,5 +1,5 @@
 # Projected-Bands-in-Quantum-Espresso
-Projected Electronic Bands in Quantum Espresso
+Gives Nice plots of Atom, Orbital, and Spin projections on the Electronic Bands.
 
 ## Requirements
 * `Python`
