@@ -52,7 +52,7 @@ The Code is written in a way so that the figures can be further exported as `Mat
 Note  :  Actual Code in `band_projection_QE.py` statrts after line number 1230, before which are the definitions, which should not be
 played with, in case of discrepencies, please contact me via commenting in this repository with your input code ( if possible ).
 
-<img src="Initial.jpg" width=800 align="middle">\
+<img src="Initial.jpg" width=500 align="middle">\
 
 Note  :  Wannier Window plotting is also supported due to my current work in it. Examples are in Spin_Orbit\Pt. All datas extracted from Quantum Espresso Outputs are exported in MATLAB .mat format by Default. This enables plotting the graphs in MATLAB as well ( See example  Spin-Unpolarized\MoS2\Continnious_bands\MATLAB_OUTPUT ).
 
