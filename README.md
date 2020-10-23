@@ -1,10 +1,9 @@
 # Projected-Bands-in-Quantum-Espresso
-Gives Nice plots of Atom, Orbital, and Spin projections on the Electronic Bands.
+Gives Nice plots of Atom, Orbital, and Spin projections on the Electronic Bands with MATLAB Support.
 
-<img src="Spin-Unpolarized/MoS2/Continnious_bands/Figures/Projection_Mo_d_Up.png" width=500 align="left">
-<img src="Spin-Unpolarized/MoS2/Discontinious_bands/Figures/Projection_Mo_d_Up.png" width=500 align="middle">
-
-
+<img src="Spin-Unpolarized/MoS2/Continnious_bands/Figures/Projection_Mo_d_Up.png" width=400 align="left">
+<img src="Spin-Unpolarized/MoS2/Discontinious_bands/Figures/Projection_Mo_d_Up.png" width=400 align="middle">
+<img src="Spin_Orbit/Pt/Figures/Projection_Pt_s_Up.png" width=400 align="middle">
 
 ## Requirements
 * `Python`
@@ -39,7 +38,7 @@ scf.out and bands.in, while bands.x and pojwfc.x can be run in the same folder w
 In the example folders, the python code is already configured, but in case of a different material, intially run the code to get the 
 Total Band Structure, by commenting the line numbers 1257 to 1307. 
 
-<img src="Initial.jpg" width=800 align="middle">
+<img src="Projection.jpg" width=500 align="middle">
 
 This prints the atom indices and orbital indices to be fed in for the projection run, the same information is saved in states.txt after
 the first run. Now, in the second run, take the projections you desire to be fed in line number 1259 to 1265 after uncommenting
@@ -47,8 +46,6 @@ line number 1257 to 1307. The nspin value in line number 1233 takes the value as
 * 1  :  Unpolarized Spin Case
 * 2  :  Colinear Polarized Spin Case
 * 3  :  Non-Colinear Spin-Orbit Case 
-
-<img src="Projection.jpg" width=800 align="middle">\
 
 In the Second run, one gets the projection of all the atoms and orbitals ( and spins in case of Spin-Polarized ).
 To get **t<sub>2g</sub>** and **e<sub>g</sub>** resolved data ( or any particular orbital projection ), change the lines from 1271 to 1276 according to the
@@ -58,7 +55,11 @@ The Code is written in a way so that the figures can be further exported as `Mat
 Note  :  Actual Code in `band_projection_QE.py` statrts after line number 1214, before which are the definitions, which should not be
 played with, in case of discrepencies, please contact me via commenting in this repository with your input files ( if possible ).
 
-Note  :  Wannier Window plotting is also supported due to my current work in it. Examples are in Spin_Orbit\Pt.
+<img src="Initial.jpg" width=500 align="middle">\
+
+Note  :  Wannier Window plotting is also supported due to my current work in it. Examples are in Spin_Orbit\Pt. All datas extracted from Quantum Espresso Outputs are exported in MATLAB .mat format by Default. This enables plotting the graphs in MATLAB as well ( See example  Spin-Unpolarized\MoS2\Continnious_bands\MATLAB_OUTPUT ).
+
+Note  :  Not all the figures created are actual projections, for example, in Spin_Polarized/FeO/Figure, Fe p-orbitals and O d-orbitals are empty ( or shows only one band occupied due to auto-normalization in python matplotlib ). Since this orbital wavefunctions are not stated in their pseudo-potential files, hence their are no contributions in electronic ennergies, but for the sake of even number of arrays supported by numpy, the code also has spaces to occupy those weights ( whcich are nothing but zeros ).
 
 #### It is highly recomended to go through all the example file's inputs and `band_projection_QE.py` for each of them before running it for your material.
 
