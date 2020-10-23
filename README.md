@@ -26,8 +26,10 @@ Currently, three types of situations are supported :\
 - [x] Spin Polarized
 - [x] Non-Collinear Spin-Orbit
 
-Make your input files in the format as provided in the examples and run the `band_projection_QE.sh` using : \
-`bash band_projection_QE.sh`  command\
+Make your input files in the format as provided in the examples and run the `band_projection_QE.sh` using :
+
+> bash band_projection_QE.sh
+
 Or you can run in the sequence as given in `band_projection_QE.sh`\
 You can change the scf.in and bands.in according to you material, but bandsx.in and projwfc.in should be as provided in the examples.
 Output  files are now read in by the Python Code, run it in examples using :
