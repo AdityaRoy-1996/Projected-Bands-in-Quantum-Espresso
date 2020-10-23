@@ -37,13 +37,16 @@ Note : In case pw.x is ran on different PCs due to limitations in avabillity of 
 scf.out and bands.in, while bands.x and pojwfc.x can be run in the same folder without any processor limitations.
 
 In the example folders, the python code is already configured, but in case of a different material, intially run the code to get the 
-Total Band Structure, by commenting the line numbers 1269 to 1317. 
+Total Band Structure, by commenting the line numbers 1257 to 1307. 
 
 <img src="Initial.jpg" width=800 align="middle">
 
 This prints the atom indices and orbital indices to be fed in for the projection run, the same information is saved in states.txt after
-the first run. Now, in the second run, take the projections you desire to be fed in line number 1271 to 1276 after uncommenting
-line number 1269 to 1317.
+the first run. Now, in the second run, take the projections you desire to be fed in line number 1259 to 1265 after uncommenting
+line number 1257 to 1307. The nspin value in line number 1233 takes the value as in scf.in :\
+* 1  :  Unpolarized Spin Case
+* 2  :  Colinear Polarized Spin Case
+* 3  :  Non-Colinear Spin-Orbit Case 
 
 <img src="Projection.jpg" width=800 align="middle">\
 
@@ -52,8 +55,8 @@ To get **t<sub>2g</sub>** and **e<sub>g</sub>** resolved data ( or any particula
 information in states.txt.\
 The Code is written in a way so that the figures can be further exported as `Matplotlib figure` and `Axes` objects.
 
-Note  :  Actual Code in `band_projection_QE.py` statrts after line number 1230, before which are the definitions, which should not be
-played with, in case of discrepencies, please contact me via commenting in this repository with your input code ( if possible ).
+Note  :  Actual Code in `band_projection_QE.py` statrts after line number 1214, before which are the definitions, which should not be
+played with, in case of discrepencies, please contact me via commenting in this repository with your input files ( if possible ).
 
 Note  :  Wannier Window plotting is also supported due to my current work in it. Examples are in Spin_Orbit\Pt.
 
@@ -62,4 +65,9 @@ Note  :  Wannier Window plotting is also supported due to my current work in it.
 #### Make Sure, the Pseudopotential you use, has to contain the atomic wavefunctions in proper format. The examples have been run with PAW PBE types without pure Norm-Conserving part. The Pure Norm-Conserving Pseudopotential Files creates problems in the projwfc.x run. The Hybrid potentials like PBE, PBEsol, Ultrasoft are good Pseudopotentials for Projection purposes.
 
 #### I will try to keep updating the code to synchronize it with new versions of Quantum Espresso.
-## This code is tested in QE version 6.2, 6.4 and 6.5 and Python version 3.8.3.
+### This code is tested in QE version 6.2, 6.4 and 6.5 and Python version 3.8.3.
+
+## References
+* P. Giannozzi, O. Baseggio, P. Bonfà, D. Brunato, R. Car, I. Carnimeo, C. Cavazzoni, S. de Gironcoli, P. Delugas, F. Ferrari Ruffino, A. Ferretti, N. Marzari, I. Timrov, A. Urru, S. Baroni; J. Chem. Phys. 152, 154105 (2020) https://doi.org/10.1063/5.0005082.
+* Uthpala Herath, Pedram Tavadze, Xu He, Eric Bousquet, Sobhit Singh, Francisco Muñoz, and Aldo H. Romero. "PyProcar: A Python library for electronic structure pre/post-processing". Computer Physics Communications 251 (2020): 107080.
+* https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/multicolored_line.html

@@ -1,6 +1,0 @@
- &projwfc
-    prefix = 'LiF',
-    outdir = '.',
-    lsym = .FALSE.,
-    filproj = 'bands'
- /

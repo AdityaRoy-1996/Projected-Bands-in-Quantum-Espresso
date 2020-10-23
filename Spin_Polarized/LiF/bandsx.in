@@ -1,7 +1,0 @@
-&bands
-    prefix = 'LiF'
-    outdir = '.'
-    lsym = .FALSE.
-    filband = 'bands.dat'
- /
-

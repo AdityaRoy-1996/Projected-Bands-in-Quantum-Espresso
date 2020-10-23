@@ -50,14 +50,17 @@ def write_new_projwfc(filproj, nspin) :
     if nspin == 3 :
         split      =   '    T    T\n'
         footer     =   ['.projwfc_up'] 
+        print('NON-COLLINEAR WITH SPIN-ORBIT CASE')
         
     elif nspin == 1 :
         split      =   '    F    F\n'
         footer     =   ['.projwfc_up']
+        print('UNPOLARIZED SPIN CASE')
         
     elif nspin == 2 :
         split      =   '    F    F\n' 
         footer    =   ['.projwfc_up', '.projwfc_down']
+        print('COLINEAR POLARIZED SPIN CASE')
         
     else  :  
         print('Problem with nspin in definition write_new_projwfc()')
@@ -407,30 +410,12 @@ def read_scf_out(filename = 'scf.out'):
     Returns
     -------
     Fermi Energy as float in eV
-    nspin value  as integer
-            1 is  spin unpolarized
-            2 is  spin polarized 
-            3 is  non-collinear and spin-orbit 
     '''
     fermi_level  =  float(open(filename, 'r').read().split('the Fermi energy is')\
                     [1].split()[0])
         
-    spin = open(filename, 'r').read().split('spin')
-    if len(spin) ==  1 :
-        nspin = 1
-        
-    elif len(spin)  > 2 :
-        nspin = 2
-        
-    elif len(spin) == 2 :
-        nspin = 3
-        
-    else : 
-        print('Only Spin unpolarized, polarized and non-collinear\
-               with spin orbit is supported')
-        sys.exit(0)
     
-    return(fermi_level, nspin)
+    return(fermi_level)
 
 def read_band_energies(filename):
     '''
@@ -454,7 +439,7 @@ def read_band_energies(filename):
     '''
     gnu = open(filename + '.gnu', 'r').readlines()  
     
-    efermi   =   read_scf_out()[0]     #in eV
+    efermi   =   read_scf_out()      #in eV
     print('The Fermi Level is at %10.4f  eV is subtracted in plots'\
           %efermi)
     
@@ -864,7 +849,7 @@ def Total_Plot(x, ys, figsize, title, linewidth,
     plt.xticks(fontsize=labelsize)
     plt.yticks(fontsize=labelsize)
     plt.ylabel(ylabel=r'$E$ - $E_{f}$  (eV)',  fontsize=labelsize*1.2)
-    plt.tight_layout()
+    
     return(fig, axs)
 
 def Projected_Plot(x, ys, weights, figsize, title, 
@@ -1009,7 +994,7 @@ def Projected_Plot(x, ys, weights, figsize, title,
     plt.yticks(fontsize=labelsize)
     plt.ylabel(ylabel=r'$E$ - $E_{f}$  (eV)',
                fontsize=labelsize*1.2) 
-    plt.tight_layout()
+
     return(fig, axs)
 
 
@@ -1036,12 +1021,13 @@ def project_bands(filband        =     'bands.dat',
                   window_on      =       False,
                   window_lim     =       None,
                   win_color      =       'lime',
-                  matlab         =       False
+                  matlab         =       False,
+                  nspin          =       1
                   ) :
     
     
     #----------Reading and Aranging Datas from Ouput--------
-    nspin      =   read_scf_out()[1]
+    nspin      =   nspin
     states     =   read_states_projwfc_out(projwfc_out, nspin)
     
     if len(band_array)  ==  1 : 
@@ -1236,7 +1222,7 @@ orbitals    =        [0, 1, 2, 3, 4, 5, 6, 7, 8]
 spins       =        [0,1]
 color       =        'b'   
 savefile    =        'Total Band Structure.png'
-yticks      =        [-10, 0, 15]
+yticks      =        [-6, 0, 6]
 window_on   =        False
 window_frz  =        [-1.6, 3]
 frz_color   =        'lime'
@@ -1244,6 +1230,7 @@ window_dis  =        [3,    5]
 dis_color   =        'aqua'
 window_lim  =        [window_frz, window_dis]
 win_color   =        [frz_color, dis_color] 
+nspin       =        2
 
 
 fig, ax, band_weights, band_array, atoms_name, orbitals_name =\
@@ -1258,7 +1245,8 @@ fig, ax, band_weights, band_array, atoms_name, orbitals_name =\
                                 window_on      =     window_on,
                                 window_lim     =     window_lim,
                                 win_color      =     win_color,
-                                matlab         =     True                                
+                                matlab         =     True,
+                                nspin          =     nspin
                                 )
                  
 ax.set_yticks(ticks=yticks)
@@ -1268,11 +1256,11 @@ fig.savefig(savefile)
 
 # Plotting Projected Band Structure
 
-atoms_list       =    [[0], [1]]
-atom_names       =    ['Li', 'F']
-orbitals_list    =    [[0], [1,2,3]]
-orbital_names    =    ['s', 'p']
-spins_list       =    [[0],[1]]
+atoms_list       =    [[0]]
+atom_names       =    ['Fe']
+orbitals_list    =    [[0], [1,2,3], [4,5,6,7,8]]
+orbital_names    =    ['s', 'p', 'd']
+spins_list       =    [[0], [1]]
 spin_names       =    ['Up', 'Down']
 cmap             =    'viridis_r'
 
@@ -1307,7 +1295,8 @@ for i in range(len(atoms_list)) :
                                     orbitals_name  =   orbitals_name,
                                     window_on      =   window_on,
                                     window_lim     =   window_lim,
-                                    win_color      =   win_color 
+                                    win_color      =   win_color,
+                                    nspin          =   nspin
                                     )[:2]
         
             ax.set_yticks(ticks=yticks)
