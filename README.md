@@ -35,29 +35,36 @@ Output  files are now read in by the Python Code, run it using :\
 Note : In case pw.x is ran on different PCs due to limitations in avabillity of processors, only files from pw.x required will be 
 scf.out and bands.in, while bands.x and pojwfc.x can be run in the same folder without any processor limitations.
 
-In the example folders, the python code is already configured, but in case of a different material, intially run the code to get the 
-Total Band Structure, by commenting the line numbers 1257 to 1307. 
+Note  :  Actual Code in `band_projection_QE.py` statrts after \
 
-<img src="Projection.jpg" width=500 align="middle">
+<img src="Initial_1.jpg" width=500 align="middle">
+*Figure : 1*
+
+( look from the end of the file ) before which are the definitions, which should not be played with, in case of discrepencies, please contact me via commenting in this repository with your input files ( if possible ).
+
+In the example folders, the python code is already configured, but in case of a different materials, intially run the code to get the 
+Total Band Structure, by running  :\
+`python band_total_QE.py`\
+
+<img src="Initial_2.jpg" width=500 align="middle">
+*Figure : 2*
 
 This prints the atom indices and orbital indices to be fed in for the projection run, the same information is saved in states.txt after
-the first run. Now, in the second run, take the projections you desire to be fed in line number 1259 to 1265 after uncommenting
-line number 1257 to 1307. The nspin value in line number 1233 takes the value as in scf.in :
+the first run. Now, in the second run, take the projections you desire to be fed in :\
+
+<img src="Projection.jpg" width=500 align="middle">
+*Figure : 3*
+
+The nspin in Figure : 2, takes the value as in scf.in :
 * 1  :  Unpolarized Spin Case
 * 2  :  Colinear Polarized Spin Case
 * 3  :  Non-Colinear Spin-Orbit Case 
 
 In the Second run, one gets the projection of all the atoms and orbitals ( and spins in case of Spin-Polarized ).
-To get **t<sub>2g</sub>** and **e<sub>g</sub>** resolved data ( or any particular orbital projection ), change the lines from 1271 to 1276 according to the
-information in states.txt.\
+To get **t<sub>2g</sub>** and **e<sub>g</sub>** resolved data ( or any particular orbital projection ), change the lines in Figure : 3 according to the information in states.txt.\
 The Code is written in a way so that the figures can be further exported as `Matplotlib figure` and `Axes` objects.
 
-Note  :  Actual Code in `band_projection_QE.py` statrts after line number 1214, before which are the definitions, which should not be
-played with, in case of discrepencies, please contact me via commenting in this repository with your input files ( if possible ).
-
-<img src="Initial.jpg" width=500 align="middle">
-
-Note  :  Wannier Window visualization is also supported due to my current work in it. Examples are in Spin_Orbit\Pt. All datas extracted from Quantum Espresso Outputs are exported in MATLAB .mat format by Default. This enables plotting the graphs in MATLAB as well ( See example  Spin-Unpolarized\MoS2\Continnious_bands\MATLAB_OUTPUT ).
+Note  :  Wannier Window visualization is also supported due to my current work in the same. Examples are in Spin_Orbit\Pt. All datas extracted from Quantum Espresso Outputs are exported in MATLAB .mat format by Default. This enables plotting the graphs in MATLAB as well ( See example  Spin-Unpolarized\MoS2\Continnious_bands\MATLAB_OUTPUT ).
 
 Note  :  Not all the figures created are actual projections, for example, in Spin_Polarized/FeO/Figure, Fe p-orbitals and O d-orbitals are empty ( or shows only one band occupied due to auto-normalization in python matplotlib ). Since this orbital wavefunctions are not stated in their pseudo-potential files, hence their are no contributions in electronic ennergies, but for the sake of even number of arrays supported by numpy, the code also has spaces to occupy those weights ( which are nothing but zeros ).
 
