@@ -1,8 +1,8 @@
 # Projected-Bands-in-Quantum-Espresso
 Gives Nice plots of Atom, Orbital, and Spin projections on the Electronic Bands.
 
-<img src="Spin-Unpolarized/MoS2/Continnious_bands/Figures/Projection_Mo_d_Up.png" width=200 align="left">
-<img src="Spin-Unpolarized/MoS2/Discontinious_bands/Figures/Projection_Mo_d_Up.png" width=200 align="middle">
+<img src="Spin-Unpolarized/MoS2/Continnious_bands/Figures/Projection_Mo_d_Up.png" width=500 align="left">
+<img src="Spin-Unpolarized/MoS2/Discontinious_bands/Figures/Projection_Mo_d_Up.png" width=500 align="middle">
 
 
 
