@@ -3,7 +3,7 @@ Gives Nice plots of Atom, Orbital, and Spin projections on the Electronic Bands 
 
 <img src="Spin-Unpolarized/MoS2/Continnious_bands/Figures/Projection_Mo_d_Up.png" width=400 align="left">
 <img src="Spin-Unpolarized/MoS2/Discontinious_bands/Figures/Projection_Mo_d_Up.png" width=400 align="middle">
-<img src="Spin_Orbit/Pt/Figures/Projection_Pt_s_Up.png" width=400 align="left">
+<img src="Spin_Orbit/Pt/Figures/Projection_Pt_s_Up.png" width=400 align="middle">
 
 ## Requirements
 * `Python`
