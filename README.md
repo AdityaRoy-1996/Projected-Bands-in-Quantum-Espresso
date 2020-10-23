@@ -50,13 +50,9 @@ The Code is written in a way so that the figures can be further exported as `Mat
 Note  :  Actual Code in `band_projection_QE.py` statrts after line number 1230, before which are the definitions, which should not be
 played with, in case of discrepencies, please contact me via commenting in this repository with your input code ( if possible ).
 
-#### It is highly recomended to go through all the example file's inputs and `band_projection_QE.py` for each of them
-before running it for your material.
+#### It is highly recomended to go through all the example file's inputs and `band_projection_QE.py` for each of them before running it for your material.
 
-#### Make Sure, the Pseudopotential you use, has to contain the atomic wavefunctions in proper format. The examples have been
-#### run with PAW PBE types without pure Norm-Conserving part. The Pure Norm-Conserving Pseudopotential Files creates
-#### problems in the projwfc.x run. The Hybrid potentials like PBE, PBEsol, Ultrasoft are good Pseudopotentials for
-#### Projection purposes.
+#### Make Sure, the Pseudopotential you use, has to contain the atomic wavefunctions in proper format. The examples have been run with PAW PBE types without pure Norm-Conserving part. The Pure Norm-Conserving Pseudopotential Files creates problems in the projwfc.x run. The Hybrid potentials like PBE, PBEsol, Ultrasoft are good Pseudopotentials for Projection purposes.
 
 #### I will try to keep updating the code to synchronize it with new versions of Quantum Espresso.
-#### This code is tested in QE version 6.2, 6.4 and 6.5.
+## This code is tested in QE version 6.2, 6.4 and 6.5.
