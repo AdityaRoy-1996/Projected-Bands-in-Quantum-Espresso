@@ -1,6 +1,0 @@
- &projwfc
-    prefix = 'MoS2',
-    outdir = '.',
-    lsym = .FALSE.,
-    filproj = 'bands'
- /
