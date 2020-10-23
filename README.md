@@ -43,7 +43,7 @@ line number 1269 to 1317.
 <img src="Projection.jpg" width=800 align="middle">\
 
 In the Second run, one gets the projection of all the atoms and orbitals ( and spins in case of Spin-Polarized ).
-To get $t_{2g}$ and eg resolved data ( or any particular orbital projection ), change the lines from 1271 to 1276 according to the
+To get t<sub>2g</sub> and e<sub>g</sub> resolved data ( or any particular orbital projection ), change the lines from 1271 to 1276 according to the
 information in states.txt.\
 The Code is written in a way so that the figures can be further exported as `Matplotlib figure` and `Axes` objects.
 
