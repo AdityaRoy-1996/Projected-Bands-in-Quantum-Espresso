@@ -30,8 +30,10 @@ Make your input files in the format as provided in the examples and run the `ban
 `bash band_projection_QE.sh`  command\
 Or you can run in the sequence as given in `band_projection_QE.sh`\
 You can change the scf.in and bands.in according to you material, but bandsx.in and projwfc.in should be as provided in the examples.
-Output  files are now read in by the Python Code, run it using :\
+Output  files are now read in by the Python Code, run it in examples using :
+
 > python band_projection_QE.py
+
 Note : In case pw.x is ran on different PCs due to limitations in avabillity of processors, only files from pw.x required will be 
 scf.out and bands.in, while bands.x and pojwfc.x can be run in the same folder without any processor limitations.
 
