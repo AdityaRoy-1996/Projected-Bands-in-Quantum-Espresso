@@ -1,0 +1,3 @@
+Maximum Atoms and Orbitals :
+[  0 : Mo   ,  1 : Mo   ,  2 : S    ,  3 : S    ,  4 : S    ,  5 : S    ,] Total : 6
+[ 0 : s , 1 : p_z , 2 : p_x , 3 : p_y , 4 : d_z2 , 5 : d_zx , 6 : d_zy , 7 : d_(x2 - y2) , 8 : d_xy ,] Total : 9

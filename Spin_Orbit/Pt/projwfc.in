@@ -1,0 +1,6 @@
+&projwfc
+   outdir='.',
+   prefix='Pt',
+   filproj='bands'
+   lsym = .false.
+/

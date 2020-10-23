@@ -1,0 +1,35 @@
+ &control
+    calculation = 'bands'
+    restart_mode='from_scratch',
+    prefix='Pt',
+    tprnfor = .true.,
+    tstress =.true.,
+    pseudo_dir = '.',
+    outdir='.'
+ /
+ &system
+    ibrav=  2, celldm(1) =7.42, nat=  1, ntyp= 1,
+    lspinorb=.true.,
+    noncolin=.true.,
+    starting_magnetization=0.0,
+    occupations='smearing',
+    smearing = 'marzari-vanderbilt'
+    degauss=0.02,
+    ecutwfc =30.0,
+    ecutrho =250.0,
+    nosym  =  .true.
+ /
+ &electrons
+    mixing_beta = 0.4,
+    conv_thr =  1.0d-8
+ /
+ATOMIC_SPECIES
+Pt  0.0       Pt.rel-pbe-n-rrkjus.UPF
+ATOMIC_POSITIONS alat
+Pt  0.0000000   0.00000000   0.0
+K_POINTS { crystal_b }
+4
+0.500   0.000   0.500   49  !X
+0.000   0.000   0.000   49  !\Gamma
+0.375   0.375   0.750   49  !K
+0.500   0.000   0.500    1  !X

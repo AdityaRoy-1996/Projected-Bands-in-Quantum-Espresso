@@ -1,0 +1,7 @@
+&bands
+    prefix = 'feo_af'
+    outdir = '.'
+    lsym = .FALSE.
+    filband = 'bands.dat'
+ /
+

@@ -1,0 +1,8 @@
+ &bands
+    prefix  = 'Pt'
+    outdir  = '.'
+    filband = 'bands.dat'
+    lsym    =.false.
+ /
+
+

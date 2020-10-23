@@ -1,0 +1,6 @@
+ &projwfc
+    prefix = 'feo_af',
+    outdir = '.',
+    lsym = .FALSE.,
+    filproj = 'bands'
+ /
