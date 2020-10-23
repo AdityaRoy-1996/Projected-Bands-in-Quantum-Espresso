@@ -38,7 +38,7 @@ scf.out and bands.in, while bands.x and pojwfc.x can be run in the same folder w
 Note  :  Actual Code in `band_projection_QE.py` statrts after
 
 <img src="Initial_1.jpg" width=500 align="middle">
-**Figure : 1**
+***Figure : 1***
 
 ( look from the end of the file ) before which are the definitions, which should not be played with, in case of discrepencies, please contact me via commenting in this repository with your input files ( if possible ).
 
@@ -47,13 +47,13 @@ Total Band Structure, by running  :\
 `python band_total_QE.py`
 
 <img src="Initial_2.jpg" width=500 align="middle">
-**Figure : 2**
+***Figure : 2***
 
 This prints the atom indices and orbital indices to be fed in for the projection run, the same information is saved in states.txt after
 the first run. Now, in the second run, take the projections you desire to be fed in :
 
 <img src="Projection.jpg" width=500 align="middle">
-**Figure : 3**
+***Figure : 3***
 
 The nspin in Figure : 2, takes the value as in scf.in :
 * 1  :  Unpolarized Spin Case
