@@ -50,7 +50,8 @@ line number 1257 to 1307. The nspin value in line number 1233 takes the value as
 In the Second run, one gets the projection of all the atoms and orbitals ( and spins in case of Spin-Polarized ).
 To get **t<sub>2g</sub>** and **e<sub>g</sub>** resolved data ( or any particular orbital projection ), change the lines from 1271 to 1276 according to the
 information in states.txt.\
-The Code is written in a way so that the figures can be further exported as `Matplotlib figure` and `Axes` objects.
+The Code is written in a way so that the figures can be further exported as `Matplotlib figure` and `Axes` objects.\
+Fermi level is automatically subtracted in the plots.
 
 Note  :  Actual Code in `band_projection_QE.py` statrts after line number 1214, before which are the definitions, which should not be
 played with, in case of discrepencies, please contact me via commenting in this repository with your input files ( if possible ).
