@@ -31,7 +31,7 @@ Make your input files in the format as provided in the examples and run the `ban
 Or you can run in the sequence as given in `band_projection_QE.sh`\
 You can change the scf.in and bands.in according to you material, but bandsx.in and projwfc.in should be as provided in the examples.
 Output  files are now read in by the Python Code, run it using :\
-`python band_projection_QE.py`\
+> python band_projection_QE.py
 Note : In case pw.x is ran on different PCs due to limitations in avabillity of processors, only files from pw.x required will be 
 scf.out and bands.in, while bands.x and pojwfc.x can be run in the same folder without any processor limitations.
 
@@ -44,7 +44,7 @@ Note  :  Actual Code in `band_projection_QE.py` statrts after
 
 In the example folders, the python code is already configured, but in case of a different materials, intially run the code to get the 
 Total Band Structure, by running  :\
-`python band_total_QE.py`
+> python band_total_QE.py
 
 <img src="Initial_2.jpg" width=500 align="middle">
 ***Figure : 2***
@@ -61,7 +61,8 @@ The nspin in Figure : 2, takes the value as in scf.in :
 * 3  :  Non-Colinear Spin-Orbit Case 
 
 In the Second run, one gets the projection of all the atoms and orbitals ( and spins in case of Spin-Polarized ).
-To get **t<sub>2g</sub>** and **e<sub>g</sub>** resolved data ( or any particular orbital projection ), change the lines in Figure : 3 according to the information in states.txt.\
+To get **t<sub>2g</sub>** and **e<sub>g</sub>** resolved data ( or any particular orbital projection ), change the lines in Figure : 3 according to the information in states.txt and run \
+> python band_projection_QE.py
 The Code is written in a way so that the figures can be further exported as `Matplotlib figure` and `Axes` objects.
 
 Note  :  Wannier Window visualization is also supported due to my current work in the same. Examples are in Spin_Orbit\Pt. All datas extracted from Quantum Espresso Outputs are exported in MATLAB .mat format by Default. This enables plotting the graphs in MATLAB as well ( See example  Spin-Unpolarized\MoS2\Continnious_bands\MATLAB_OUTPUT ).
