@@ -2,19 +2,16 @@
 Projected Electronic Bands in Quantum Espresso
 
 ## Requirements
-- [x] `Python`
-- [x] `Python Libraries :`
-\
-- [x]   `numpy`
-- [x]   `sys`
+* `Python`
+* `Python Libraries :`
+    * `numpy`
+    * `sys`
 - [x]   `matplotlib`
 - [x]   `collections`
 - [x]  `scipy`
 - [x]  `os`
 - [x]   `shutil`
- \
 - [x]  `Quantum Espresso executables :`
-\
 - [x]   `pw.x`
 - [x]    `bands.x`
 - [x]  `projwfc.x`
