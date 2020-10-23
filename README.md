@@ -62,7 +62,9 @@ The nspin in Figure : 2, takes the value as in scf.in :
 
 In the Second run, one gets the projection of all the atoms and orbitals ( and spins in case of Spin-Polarized ).
 To get **t<sub>2g</sub>** and **e<sub>g</sub>** resolved data ( or any particular orbital projection ), change the lines in Figure : 3 according to the information in states.txt and run \
+
 > python band_projection_QE.py
+
 The Code is written in a way so that the figures can be further exported as `Matplotlib figure` and `Axes` objects.
 
 Note  :  Wannier Window visualization is also supported due to my current work in the same. Examples are in Spin_Orbit\Pt. All datas extracted from Quantum Espresso Outputs are exported in MATLAB .mat format by Default. This enables plotting the graphs in MATLAB as well ( See example  Spin-Unpolarized\MoS2\Continnious_bands\MATLAB_OUTPUT ).
