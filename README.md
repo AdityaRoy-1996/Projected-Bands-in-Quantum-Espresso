@@ -61,15 +61,8 @@ The nspin in Figure : 2, takes the value as in scf.in :
 * 3  :  Non-Colinear Spin-Orbit Case 
 
 In the Second run, one gets the projection of all the atoms and orbitals ( and spins in case of Spin-Polarized ).
-<<<<<<< HEAD
 To get **t<sub>2g</sub>** and **e<sub>g</sub>** resolved data ( or any particular orbital projection ), change the lines in Figure : 3 according to the information in states.txt.\
 The Code is written in a way so that the figures can be further exported as `Matplotlib figure` and `Axes` objects.
-=======
-To get **t<sub>2g</sub>** and **e<sub>g</sub>** resolved data ( or any particular orbital projection ), change the lines from 1271 to 1276 according to the
-information in states.txt.\
-The Code is written in a way so that the figures can be further exported as `Matplotlib figure` and `Axes` objects.\
-Fermi level is automatically subtracted in the plots.
->>>>>>> 20836fd461e88125086f59adc6e563892f378dc6
 
 Note  :  Wannier Window visualization is also supported due to my current work in the same. Examples are in Spin_Orbit\Pt. All datas extracted from Quantum Espresso Outputs are exported in MATLAB .mat format by Default. This enables plotting the graphs in MATLAB as well ( See example  Spin-Unpolarized\MoS2\Continnious_bands\MATLAB_OUTPUT ).
 
@@ -80,7 +73,7 @@ It is highly recomended to go through all the example file's inputs and `band_pr
 Make Sure, the Pseudopotential you use, has to contain the atomic wavefunctions in proper format. The examples have been run with PAW PBE types without pure Norm-Conserving part. The Pure Norm-Conserving Pseudopotential Files creates problems in the projwfc.x run. The Hybrid potentials like PBE, PBEsol, Ultrasoft are good Pseudopotentials for Projection purposes.
 
 I will try to keep updating the code to synchronize it with new versions of Quantum Espresso.
-#### This code is tested in QE version 6.2, 6.4 and 6.5 and Python version 3.8.3.
+####This code is tested in QE version 6.2, 6.4 and 6.5 and Python version 3.8.3.
 
 ## References
 * P. Giannozzi, O. Baseggio, P. Bonfà, D. Brunato, R. Car, I. Carnimeo, C. Cavazzoni, S. de Gironcoli, P. Delugas, F. Ferrari Ruffino, A. Ferretti, N. Marzari, I. Timrov, A. Urru, S. Baroni; J. Chem. Phys. 152, 154105 (2020) https://doi.org/10.1063/5.0005082.
