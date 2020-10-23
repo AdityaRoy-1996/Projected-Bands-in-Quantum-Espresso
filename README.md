@@ -43,7 +43,7 @@ line number 1269 to 1317.
 <img src="Projection.jpg" width=800 align="middle">\
 
 In the Second run, one gets the projection of all the atoms and orbitals ( and spins in case of Spin-Polarized ).
-To get t<sub>2g</sub> and e<sub>g</sub> resolved data ( or any particular orbital projection ), change the lines from 1271 to 1276 according to the
+To get **t<sub>2g</sub>** and **e<sub>g</sub>** resolved data ( or any particular orbital projection ), change the lines from 1271 to 1276 according to the
 information in states.txt.\
 The Code is written in a way so that the figures can be further exported as `Matplotlib figure` and `Axes` objects.
 
@@ -51,7 +51,7 @@ Note  :  Actual Code in `band_projection_QE.py` statrts after line number 1230, 
 played with, in case of discrepencies, please contact me via commenting in this repository with your input code ( if possible ).
 
 #### It is highly recomended to go through all the example file's inputs and `band_projection_QE.py` for each of them
-#### before running it for your material.
+before running it for your material.
 
 #### Make Sure, the Pseudopotential you use, has to contain the atomic wavefunctions in proper format. The examples have been
 #### run with PAW PBE types without pure Norm-Conserving part. The Pure Norm-Conserving Pseudopotential Files creates
