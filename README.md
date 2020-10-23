@@ -43,7 +43,8 @@ Note  :  Actual Code in `band_projection_QE.py` statrts after
 ( look from the end of the file ) before which are the definitions, which should not be played with, in case of discrepencies, please contact me via commenting in this repository with your input files ( if possible ).
 
 In the example folders, the python code is already configured, but in case of a different materials, intially run the code to get the 
-Total Band Structure, by running  :\
+Total Band Structure, by running  :
+
 > python band_total_QE.py
 
 <img src="Initial_2.jpg" width=500 align="middle">
@@ -61,7 +62,7 @@ The nspin in Figure : 2, takes the value as in scf.in :
 * 3  :  Non-Colinear Spin-Orbit Case 
 
 In the Second run, one gets the projection of all the atoms and orbitals ( and spins in case of Spin-Polarized ).
-To get **t<sub>2g</sub>** and **e<sub>g</sub>** resolved data ( or any particular orbital projection ), change the lines in Figure : 3 according to the information in states.txt and run \
+To get **t<sub>2g</sub>** and **e<sub>g</sub>** resolved data ( or any particular orbital projection ), change the lines in Figure : 3 according to the information in states.txt and run
 
 > python band_projection_QE.py
 
