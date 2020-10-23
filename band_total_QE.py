@@ -1253,57 +1253,6 @@ ax.set_yticks(ticks=yticks)
 ax.set_ylim(yticks[0], yticks[2])
 fig.savefig(savefile)
 
-
-# Plotting Projected Band Structure
-
-atoms_list       =    [[0]]
-atom_names       =    ['Fe']
-orbitals_list    =    [[0], [1,2,3], [4,5,6,7,8]]
-orbital_names    =    ['s', 'p', 'd']
-spins_list       =    [[0], [1]]
-spin_names       =    ['Up', 'Down']
-cmap             =    'viridis_r'
-
-
-for i in range(len(atoms_list)) :
-    atom        =     atom_names[i]
-    atoms       =     atoms_list[i]
-    
-    for j in range(len(orbitals_list)) :
-        orbital    =  orbital_names[j]
-        orbitals   =   orbitals_list[j]
-        
-        for k in range(len(spins_list)) :
-            spin     =   spin_names[k]
-            spins    =   spins_list[k]
-        
-            title         =   'Atom : %s   Orbital : %s  Spin : %s\n'  \
-                                %(atom, orbital, spin)
-            savefile      =   'Projection_%s_%s_%s.png'    \
-                                %(atom, orbital, spin)
-            
-            fig, ax = project_bands(  
-                                    atoms          =   atoms,
-                                    orbitals       =   orbitals,
-                                    spins          =   spins,
-                                    title          =   title,
-                                    save_fig       =   savefile,
-                                    cmap           =   cmap,
-                                    band_weights   =   band_weights,
-                                    band_array     =   band_array,
-                                    atoms_name     =   atoms_name, 
-                                    orbitals_name  =   orbitals_name,
-                                    window_on      =   window_on,
-                                    window_lim     =   window_lim,
-                                    win_color      =   win_color,
-                                    nspin          =   nspin
-                                    )[:2]
-        
-            ax.set_yticks(ticks=yticks)
-            ax.set_ylim(yticks[0], yticks[2])
-            fig.savefig(savefile)
-
-
 band_weights  =  None   # Clear Memory
 
 #-----------Rough work----------------------
