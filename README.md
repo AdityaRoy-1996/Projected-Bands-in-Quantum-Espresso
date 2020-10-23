@@ -2,8 +2,8 @@
 Projected Electronic Bands in Quantum Espresso
 
 ## Requirements
-`Python`
-`Python Libraries :`
+`Python`\
+`Python Libraries :`\
   numpy
   sys
   matplotlib
