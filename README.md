@@ -22,4 +22,4 @@ Currently, three types of situations are supported :
   Spin Polarized
   Non-Collinear Spin-Orbit
   
-Make your files
+Make your input files in the format as provided in the examples and run in the sequence 
