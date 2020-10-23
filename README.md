@@ -38,13 +38,11 @@ scf.out and bands.in, while bands.x and pojwfc.x can be run in the same folder w
 In the example folders, the python code is already configured, but in case of a different material, intially run the code to get the 
 Total Band Structure, by commenting the line numbers 1269 to 1317. 
 
-<img src="Initial.jpg" width=800 align="middle">
+<img src="Projection.jpg" width=500 align="middle">
 
 This prints the atom indices and orbital indices to be fed in for the projection run, the same information is saved in states.txt after
 the first run. Now, in the second run, take the projections you desire to be fed in line number 1271 to 1276 after uncommenting
 line number 1269 to 1317.
-
-<img src="Projection.jpg" width=800 align="middle">\
 
 In the Second run, one gets the projection of all the atoms and orbitals ( and spins in case of Spin-Polarized ).
 To get **t<sub>2g</sub>** and **e<sub>g</sub>** resolved data ( or any particular orbital projection ), change the lines from 1271 to 1276 according to the
@@ -53,6 +51,8 @@ The Code is written in a way so that the figures can be further exported as `Mat
 
 Note  :  Actual Code in `band_projection_QE.py` statrts after line number 1230, before which are the definitions, which should not be
 played with, in case of discrepencies, please contact me via commenting in this repository with your input code ( if possible ).
+
+<img src="Initial.jpg" width=800 align="middle">\
 
 Note  :  Wannier Window plotting is also supported due to my current work in it. Examples are in Spin_Orbit\Pt. All datas extracted from Quantum Espresso Outputs are exported in MATLAB .mat format by Default. This enables plotting the graphs in MATLAB as well ( See example  Spin-Unpolarized\MoS2\Continnious_bands\MATLAB_OUTPUT ).
 
