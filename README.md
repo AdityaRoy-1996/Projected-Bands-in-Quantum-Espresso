@@ -4,24 +4,27 @@ Projected Electronic Bands in Quantum Espresso
 ## Requirements
 - [x] `Python`
 - [x] `Python Libraries :`
-- [x]  - [x]   `numpy`
-- [x] - [x]   `sys`
-- [x] - [x]   `matplotlib`
- - [x] - [x]  `collections`
- - [x] - [x]  `scipy`
- - [x] - [x]  `os`
- - [x] - [x]  `shutil`
+\
+- [x]   `numpy`
+- [x]   `sys`
+- [x]   `matplotlib`
+- [x]   `collections`
+- [x]  `scipy`
+- [x]  `os`
+- [x]   `shutil`
+ \
 - [x]  `Quantum Espresso executables :`
-- [x]  - [x]  `pw.x`
-- [x] - [x]   `bands.x`
- - [x] - [x]  `projwfc.x`
+\
+- [x]   `pw.x`
+- [x]    `bands.x`
+- [x]  `projwfc.x`
   
 ## Procedure :
 Currently, three types of situations are supported :\
-- [x] Spin Unpolarized\
-  \t Spin Polarized\
-  \t Non-Collinear Spin-Orbit\
-\
+- [x] Spin Unpolarized
+- [x] Spin Polarized
+- [x] Non-Collinear Spin-Orbit
+
 Make your input files in the format as provided in the examples and run the `band_projection_QE.sh` using : \
 `bash band_projection_QE.sh`  command\
 Or you can run in the sequence as given in `band_projection_QE.sh`\
