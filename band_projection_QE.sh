@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #--------------------------USER DEFINED---------------
-MPI="mpirun --oversubscribe -quiet -np"
+MPI="mpirun -quiet -np"
 CORES=8
 #-------------------END OF USER DEFINITION------------
 

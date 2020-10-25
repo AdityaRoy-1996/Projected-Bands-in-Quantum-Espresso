@@ -21,7 +21,7 @@ Gives Nice plots of Atom, Orbital, and Spin projections on the Electronic Bands 
    *  `projwfc.x`
   
 ## Procedure :
-Currently, three types of situations are supported :\
+Currently, three types of situations are supported :
 - [x] Spin Unpolarized
 - [x] Spin Polarized
 - [x] Non-Collinear Spin-Orbit
@@ -81,7 +81,7 @@ It is highly recomended to go through all the example file's inputs and `band_pr
 Make Sure, the Pseudopotential you use, has to contain the atomic wavefunctions in proper format. The examples have been run with PAW PBE types without pure Norm-Conserving part. The Pure Norm-Conserving Pseudopotential Files creates problems in the projwfc.x run. The Hybrid potentials like PBE, PBEsol, Ultrasoft are good Pseudopotentials for Projection purposes.
 
 I will try to keep updating the code to synchronize it with new versions of Quantum Espresso.
-####This code is tested in QE version 6.2, 6.4 and 6.5 and Python version 3.8.3.
+#### This code is tested in QE version 6.2, 6.4 and 6.5 and Python version 3.8.3.
 
 ## References
 * P. Giannozzi, O. Baseggio, P. Bonfà, D. Brunato, R. Car, I. Carnimeo, C. Cavazzoni, S. de Gironcoli, P. Delugas, F. Ferrari Ruffino, A. Ferretti, N. Marzari, I. Timrov, A. Urru, S. Baroni; J. Chem. Phys. 152, 154105 (2020) https://doi.org/10.1063/5.0005082.
