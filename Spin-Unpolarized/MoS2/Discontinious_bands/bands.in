@@ -23,11 +23,14 @@
   nat = 6
   ntyp = 2
   ecutwfc=50,
+  ecutrho=250,
   nbnd=30,
   input_dft='pbe',
   occupations='smearing',
   smearing='mv',
-  degauss=0.5d0,
+  degauss=0.005d0,
+!  noncolin = .true.,                ! non-collinear spin
+!  lspinorb = .true.,                ! Spin-Orbit Coupling
 /
 
 &ELECTRONS
@@ -52,12 +55,7 @@ Mo   0.666666666666667   0.333333333333333   0.750000000000000
 
 K_POINTS {crystal_b}
 4
-
-  0.00  0.00  0.00  49 !\Gamma
+  0.00  0.00  0.00  30 !\Gamma
   0.50  0.00  0.00   0 !
-
-  0.333 0.333 0.00  49 !M|K
+  0.333 0.333 0.00  30 !M|K
   0.00  0.00  0.00   0 !\Gamma
-
-
-

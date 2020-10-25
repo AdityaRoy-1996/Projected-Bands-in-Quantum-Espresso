@@ -23,10 +23,13 @@
   nat = 6
   ntyp = 2
   ecutwfc=50,
+  ecutrho=250,
   input_dft='pbe',
   occupations='smearing',
   smearing='mv',
-  degauss=0.5d0,
+  degauss=0.005d0,
+!  noncolin = .true.,                ! non-collinear spin
+!  lspinorb = .true.,                ! Spin-Orbit Coupling
 /
 
 &ELECTRONS
@@ -50,4 +53,4 @@ Mo   0.666666666666667   0.333333333333333   0.750000000000000
  S   0.666666666666667   0.333333333333333   0.379000000000000 
 
 K_POINTS {automatic}
-   6 6 6  0 0 0
+   6 6 6 0 0 0
