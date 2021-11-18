@@ -496,7 +496,7 @@ def read_kpoints(filename) :
     knames    =   []
     for i in range(len(kpoints)) :
         if kpoints[i] :  # Checking  if the string is not empty
-            kname   =   r'$\rm' + kpoints[i].split()[-1].split('!')[1] + '$'
+            kname   =   r'$\rm' + kpoints[i].split('!')[1] + '$'
             knames.append(kname)
             
     return(knames)
@@ -797,7 +797,7 @@ def Total_Plot(x, ys, figsize, title, linewidth,
             
     axs.plot(x , ys, color=color, lw=linewidth)
     
-    labelsize  =   max(figsize) * 3
+    labelsize  =   max(figsize) * 2
     axs.set_xlim(xrange[0], xrange[1])
     axs.set_ylim(yrange[0], yrange[1])
     axs.set_title(title, fontsize=labelsize)
@@ -820,12 +820,12 @@ def Total_Plot(x, ys, figsize, title, linewidth,
                               window_on    =     window_on,
                               window       =     window_lim,
                               color        =     win_color,
-                              labelsize    =     labelsize*1.2
+                              labelsize    =     labelsize*1
                               )   
     
     plt.xticks(fontsize=labelsize)
     plt.yticks(fontsize=labelsize)
-    plt.ylabel(ylabel=r'$E$ - $E_{f}$  (eV)',  fontsize=labelsize*1.2)
+    plt.ylabel(ylabel=r'$E$ - $E_{f}$  (eV)',  fontsize=labelsize*1)
     
     return(fig, axs)
 
@@ -923,7 +923,7 @@ def Projected_Plot(x, ys, weights, figsize, title,
     clr_ticks  =    []#np.linspace(vmin, vmax, clr_tick_space)
     # norm       =    plt.Normalize(vmin, vmax)
 
-    labelsize  =   max(figsize) * 3
+    labelsize  =   max(figsize) * 2
     axs.set_xlim(xrange[0], xrange[1])
     axs.set_ylim(yrange[0], yrange[1])
     axs.set_title(title, fontsize=labelsize)
@@ -964,13 +964,13 @@ def Projected_Plot(x, ys, weights, figsize, title,
                               window_on    =     window_on,
                               window       =     window_lim,
                               color        =     win_color,
-                              labelsize    =     labelsize*1.2
+                              labelsize    =     labelsize*1
                               )
 
     plt.xticks(fontsize=labelsize)
     plt.yticks(fontsize=labelsize)
     plt.ylabel(ylabel=r'$E$ - $E_{f}$  (eV)',
-               fontsize=labelsize*1.2) 
+               fontsize=labelsize*1) 
 
     return(fig, axs)
 
