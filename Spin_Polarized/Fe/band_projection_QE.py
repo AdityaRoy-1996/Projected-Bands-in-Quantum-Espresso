@@ -443,17 +443,17 @@ def read_band_energies(filename):
     print('The Fermi Level is at %10.4f  eV is subtracted in plots'\
           %efermi)
     
-    band_separator = '\n'
     grand_array = []
     array = []
     for lines in gnu :
-        if lines == band_separator :
+        to_append  =   lines.split()
+        if len(to_append) == 0 :
             grand_array.append(array)
             array = []
             continue
         
         else :
-            array.append(lines.split())
+            array.append(to_append)
     
     # Format of below code is
     # [ [kpoint, band_1], [kpoint, band_2], ... ]
