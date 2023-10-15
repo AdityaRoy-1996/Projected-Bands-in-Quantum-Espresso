@@ -82,6 +82,7 @@ Make Sure, the Pseudopotential you use, has to contain the atomic wavefunctions 
 
 I will try to keep updating the code to synchronize it with new versions of Quantum Espresso.
 #### This code is tested in QE version 6.2, 6.4 and 6.5 and Python version 3.8.3.
+***** Please provide your input files for any issues faced.*****
 
 ## References
 * P. Giannozzi, O. Baseggio, P. Bonfà, D. Brunato, R. Car, I. Carnimeo, C. Cavazzoni, S. de Gironcoli, P. Delugas, F. Ferrari Ruffino, A. Ferretti, N. Marzari, I. Timrov, A. Urru, S. Baroni; J. Chem. Phys. 152, 154105 (2020) https://doi.org/10.1063/5.0005082.
