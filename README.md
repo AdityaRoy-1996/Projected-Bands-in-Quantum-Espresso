@@ -1,6 +1,10 @@
 # Projected Bands in Quantum Espresso
 Gives Nice plots of Atom, Orbital, and Spin projections on the Electronic Bands with MATLAB Support.
 
+# Citation
+If you are using this code, please cite
+Bajaj, Naini, et al. "Sublinear temperature dependence of thermal conductivity in the incommensurate phase of TlInTe2." Physical Review B 106.21 (2022): 214101.
+
 <img src="Spin-Unpolarized/MoS2/Continnious_bands/Figures/Projection_Mo_d_Up.png" width=400 align="left">
 <img src="Spin-Unpolarized/MoS2/Discontinious_bands/Figures/Projection_Mo_d_Up.png" width=400 align="middle">
 <img src="Spin_Orbit/Pt/Figures/Projection_Pt_s_Up.png" width=400 align="middle">
