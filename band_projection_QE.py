@@ -410,8 +410,12 @@ def read_scf_out(filename = 'scf.out'):
     -------
     Fermi Energy as float in eV
     '''
-    fermi_level  =  float(open(filename, 'r').read().split('the Fermi energy is')\
-                    [1].split()[0])
+    try:
+        fermi_level  =  float(open(filename, 'r').read().split('the Fermi energy is')\
+                              [1].split()[0])
+    except:
+        fermi_level  =  float(open(filename, 'r').read().split('highest occupied level (ev):')\
+                              [1].split()[0])
         
     
     return(fermi_level)
