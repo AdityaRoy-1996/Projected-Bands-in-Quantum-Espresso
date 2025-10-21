@@ -522,7 +522,7 @@ def read_kpoints(filename) :
     knames    =   []
     for i in range(len(kpoints)) :
         if kpoints[i] :  # Checking  if the string is not empty
-            kname   =   r'$\rm' + kpoints[i].split()[-1].split('!')[1] + '$'
+            kname   =   r'$\rm ' + kpoints[i].split()[-1].split('!')[1] + '$'
             knames.append(kname)
             
     return(knames)
